@@ -1,9 +1,8 @@
 .active{
   font-weight: bold;
-
 }
-.bgg{
-  background-color: rgb(251, 255, 192);
+.col{
+  background: linear-gradient(to right,#ff1f8f,#d036db);
 }
 h1{
   text-align: center;
@@ -11,7 +10,7 @@ h1{
 }
 .navbar-brand{
   font-size: 40px;
-
+  color: rgb(168, 204, 211);
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

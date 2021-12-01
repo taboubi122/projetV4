@@ -12,6 +12,7 @@ export class MenubackofficeComponent implements OnInit {
   Search!: FormGroup;
   nom!:string;
   hotel:Sejour[]=[];
+  alert:string='hotel introbvale';
 
   constructor(private service:HotelsService,private f:FormBuilder) { }
 
@@ -22,10 +23,7 @@ export class MenubackofficeComponent implements OnInit {
   }
   onChercher(ch:string){
     this.hotel=this.service.recherche(ch);
-    if (this.hotel.length==0)
-    {return "hotel introbvale";}
-    else 
-    {return this.hotel;}
+  
   }
 
 }

@@ -30,7 +30,26 @@
       </div>
     </div>
   </nav>
-  {{hotel|json}}
+  <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let t of hotel">
+           <div class="col-4">
+             <div class="card " style="width:400px">
+      
+               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+          
+                <div class="card-body">
+                <h3 class="card-title">{{t.libelle}}</h3>
+                  <h5 class="card-text">{{t.ville|ville}}</h5>
+                  <p class="card-text">{{t.prix}}</p>
+                  <p class="card-text">{{t.promotion}}</p>
+                  <p class="card-text">{{t.nombre_etoile}}</p>
+                 </div>
+             </div>
+           </div>
+        </ng-container>
+    </div>
+</div>
 
 
 

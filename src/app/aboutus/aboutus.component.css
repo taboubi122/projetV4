@@ -1,16 +1,14 @@
-.bgg{
-        background-color: rgb(251, 255, 192);
-}
+
 div{
-    text-align: center;
-    font-size: 18px;
+text-align: center;
+font-size: 18px;
 }
 h1{
-    text-decoration: underline;
-    color:crimson;
-    text-align: center;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: bold;
-    font-family: sans-serif;
+text-decoration: underline;
+color:rgb(171, 134, 202);
+text-align: center;
+font-size: 30px;
+font-style: italic;
+font-weight: bold;
+font-family: sans-serif;
 }

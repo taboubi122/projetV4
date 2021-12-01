@@ -14,10 +14,7 @@ export class TunisComponent implements OnInit {
   ngOnInit(): void {
     this.hotelsTunis=this.hotelsService.Hotelstunis();
   }
-  onAffiche(i:string,x:number){
-
-      this.hotelsTunis[x].id=i;    
-  }
+  
   
 
 }

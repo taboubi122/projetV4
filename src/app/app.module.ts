@@ -27,6 +27,17 @@ import { AjouterComponent } from './ajouter/ajouter.component';
 import { ModifierComponent } from './modifier/modifier.component';
 import { SupprimerComponent } from './supprimer/supprimer.component';
 import { RechercherComponent } from './rechercher/rechercher.component';
+import { SearchComponent } from './search/search.component';
+import { DetailAinComponent } from './detail-ain/detail-ain.component';
+import { DetailTozComponent } from './detail-toz/detail-toz.component';
+import { DetailDjerComponent } from './detail-djer/detail-djer.component';
+import { MtunisComponent } from './mtunis/mtunis.component';
+import { MHammametComponent } from './mhammamet/mhammamet.component';
+import { MDjerbaComponent } from './mdjerba/mdjerba.component';
+import { MTozeurComponent } from './mtozeur/mtozeur.component';
+import { MAinDrahimComponent } from './main-drahim/main-drahim.component';
+import { PrompHotelComponent } from './promp-hotel/promp-hotel.component';
+import { VillePipe } from './ville.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +65,18 @@ import { RechercherComponent } from './rechercher/rechercher.component';
     AjouterComponent,
     ModifierComponent,
     SupprimerComponent,
-    RechercherComponent
+    RechercherComponent,
+    SearchComponent,
+    DetailAinComponent,
+    DetailTozComponent,
+    DetailDjerComponent,
+    MtunisComponent,
+    MHammametComponent,
+    MDjerbaComponent,
+    MTozeurComponent,
+    MAinDrahimComponent,
+    PrompHotelComponent,
+    VillePipe
   ],
   imports: [
     BrowserModule,

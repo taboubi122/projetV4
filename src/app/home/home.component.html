@@ -13,13 +13,13 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/passport.2png.PNG" alt="" >
+            <img src="assets/passport.2png.PNG"  style="width:100%;" alt="" >
           </div>
           <div class="carousel-item">
-            <img src="assets/travel.png" width="991px"  >
+            <img src="assets/Alhambra Thalasso promo.PNG" width="991px"  style="width:100%;" >
           </div>
           <div class="carousel-item">
-            <img src="assets/time.jfif" width="991px"  >
+            <img src="assets/Laico TunisPromo_1.jpg" width="991px"  style="width:100%;" >
           </div>
         </div>
         
@@ -36,49 +36,42 @@
   </div>
 <p></p>
 <br>
-<div class="box">
-   <form>
-    <div class="txt">
-     <div class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-        <img src="assets/po2.PNG" height="18px" width="18px">Destination  </a>
-      <ul class="dropdown-menu" #ul>
-       <!--top destination--> 
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Korba,Tunisie</a></li>
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Hammamet,Tunisie</a></li>
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Tunis,Tunisie</a></li>
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Carthage,Tunisie</a></li>
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Monastir,Tunisie</a></li>
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Djerba,Tunisie</a></li>
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Mahdia,Tunisie</a></li>
-        <li><a href="#"> <img src="assets/position.PNG" height="18px" width="18px"> Tozeur,Tunisie</a></li>
-      </ul>
-    </div>
-    <div class="horizontal-line-50"></div>
-    <label>date Depart</label>
-    <input type="date" [value]="ul"   >
-    <span></span>
-  
-   <label>date Arriver</label></div>
-     <input type="date">
-     <span></span>
-    
-    
-    <input class="fab fa-sistrix" class="btn" value="search">
-   </form>
- </div>
+
+
 
   <!-- Main Content Area -->
   <div class="container my-5 d-grid gap-5">
     <div class="p-5 border">
       <h1>Nos meilleurs Hotels en Tunisie</h1>
+
+      <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let t of HotelsTunis">
+               <div class="col-4">
+                 <div class="card text-center" style="width:400px">
+          
+                   <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+              
+                    <div class="card-body">
+                    <h4 class="card-title">{{t.libelle}}</h4>
+                      <p class="card-text">{{t.ville}}</p>
+                        <a href="#" class="btn btn-warning">VOIR L'HÔTEL</a>
+                     
+                     <div class="card-footer">
+                      <button  class="btn btn-primary text-rigth" >recommander</button></div>
+                  </div>
+                 </div>
+               </div>
+            </ng-container>
+        </div>
+    </div>
     </div>
     
   </div>
  <div>
    <div class="container mt-3">
     <form [formGroup]="Utilisateur" (ngSubmit)="onSubmit()">
-      <div style="background-color: black;"><label style="color: white;">Back Office</label></div>
+      <div class="barre"><label>Back Office</label></div>
       <div class="input-group mb-3"> 
         <label class="input-group-text">Username
           <input type="text" placeholder="Username" formControlName="username"></label>
@@ -89,7 +82,7 @@
           <input type="password" placeholder="Password" formControlName="password"></label>
         
       </div>
-      <button type="submit" class="btn btn-primary" [disabled]="Utilisateur.invalid">s'inscrire</button>
+      <button class="btn2" type="submit" class="btn-lg " [disabled]="Utilisateur.invalid">s'inscrire</button>
     </form>
    </div>
 
