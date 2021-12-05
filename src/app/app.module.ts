@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ListsejourComponent } from './listsejour/listsejour.component';
 import { SelectedSejourComponent } from './selected-sejour/selected-sejour.component';
-import { AuthenComponent } from './authen/authen.component';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactComponent } from './contact/contact.component';
@@ -38,6 +37,10 @@ import { MTozeurComponent } from './mtozeur/mtozeur.component';
 import { MAinDrahimComponent } from './main-drahim/main-drahim.component';
 import { PrompHotelComponent } from './promp-hotel/promp-hotel.component';
 import { VillePipe } from './ville.pipe';
+import { RoutageComponent } from './routage/routage.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { AdministrateurComponent } from './administrateur/administrateur.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,6 @@ import { VillePipe } from './ville.pipe';
     MenuComponent,
     ListsejourComponent,
     SelectedSejourComponent,
-    AuthenComponent,
     HomeComponent,
     AboutusComponent,
     ContactComponent,
@@ -76,7 +78,11 @@ import { VillePipe } from './ville.pipe';
     MTozeurComponent,
     MAinDrahimComponent,
     PrompHotelComponent,
-    VillePipe
+    VillePipe,
+    RoutageComponent,
+    AccueilComponent,
+    AdministrateurComponent,
+    UtilisateurComponent
   ],
   imports: [
     BrowserModule,

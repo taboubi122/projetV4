@@ -25,5 +25,16 @@ export class MenubackofficeComponent implements OnInit {
     this.hotel=this.service.recherche(ch);
   
   }
+  promo(n:number,p:number){
+    return (1-(p/100))*n;
+  }
+  etoile(n:number)
+  {let NBetoile:string[]=[];
+    for (let i=0;i<n;i++) {
+    NBetoile.push('');
+  }
+  return NBetoile;
+}
+  
 
 }

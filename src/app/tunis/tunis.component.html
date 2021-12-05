@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="container">
     <div class="row">
         <ng-container *ngFor="let t of hotelsTunis">
@@ -8,7 +9,7 @@
           
                 <div class="card-body">
                 <h4 class="card-title">{{t.libelle|titlecase}}</h4>
-                  <p class="card-text">{{t.ville|ville}}</p>
+                  <p class="card-text">{{t.ville|titlecase|ville}}</p>
                     <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
                  </div>
              </div>

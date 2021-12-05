@@ -1,4 +1,5 @@
-<app-menubackoffice></app-menubackoffice>
+<div class="c">
+    <app-menubackoffice></app-menubackoffice>
 <div class="container ">
     <h1 class="h2"> Supprimer un produit touristique </h1>
     <div class="horizontal-line-5"></div>
@@ -6,8 +7,8 @@
           <div class="col-md-9">
               <form [formGroup]="Supprimer" (ngSubmit)="Delete(Supprimer)" class="contactForm fv-form fv-form-bootstrap"  novalidate="novalidate">
               
-                <div class="d-md-flex mb-3"><span class="me-md-3 align-self-center">Veuillez choisir la region de l'hotel :</span><span class="">
-                  <select formControlName="region" class="form-select  mt-3 mt-md-0" id="service-contact">
+                <div class="d-md-flex mb-3"><span class="me-md-3 align-self-center">Veuillez choisir la region de produit touristique :</span><span class="">
+                  <select formControlName="region" class="form-select  mt-3 mt-md-0">
                     <option value="Tunis">Tunis</option>
                     <option value="Hammamet">Hammamet</option>
                     <option value="Ain Draham">Ain Draham</option>
@@ -16,24 +17,6 @@
                   </select>
                 </span>
                 </div>
-                <div>
-                    <div *ngIf="Supprimer.value['region']=='Tunis'">
-                        <app-tunis></app-tunis>
-                    </div>
-                    <div *ngIf="Supprimer.value['region']=='Hammamet'">
-                        <app-hammamet></app-hammamet>
-                    </div>
-                    <div *ngIf="Supprimer.value['region']=='Ain Draham'">
-                        <app-ain-drahim></app-ain-drahim>
-                    </div>
-                    <div *ngIf="Supprimer.value['region']=='Tozeur'">
-                        <app-tozeur></app-tozeur>
-                    </div>
-                    <div *ngIf="Supprimer.value['region']=='Djerba'">
-                        <app-djerba></app-djerba>
-                    </div>
-                </div>
-                
                 <div class="row g-3">
                   <div class="col-md-4 col-12">
                     <div class="form-group">
@@ -45,15 +28,16 @@
                       <input formControlName="libelle" type="text" name="firstName" class="form-control" placeholder="libelle*" [(ngModel)]="produit.libelle">
                     </div>
                   </div>
-                  <div class="col-md-12 text-end">
+                  <div class="col-md-8 text-end">
                     <button type="submit" class="btn btn-primary">Suprimer</button>
                   </div>
-                  <div class="col-md-12 text-end">
+                  <div class="col-md-8 text-end">
                     <button type="reset" class="btn btn-primary" (click)="onVider(Supprimer)">Vider</button>
                   </div>
-                  onVider
 </div>
 </form>
           </div>
         </div>
+</div>
+
 </div>

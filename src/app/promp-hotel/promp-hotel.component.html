@@ -1,74 +1,103 @@
-<!-- 
+<app-menu></app-menu>
 <div class="container">
-    <div class="row"><h2>Tunis</h2>
-        <ng-container *ngFor="let t of hotelsTunis">
-           <div class="col-4">
-             <div class="card " style="width:400px">
-      
-               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
-          
-                <div class="card-body">
-                <h4 class="card-title">{{t.libelle}}</h4>
-                  <p class="card-text">{{t.ville}}</p>
-                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
-                 </div>
-             </div>
-           </div>
-        </ng-container>
+  <h2><i class="fas fa-map-marker-alt"></i> Tunis</h2>
+    <div class="row">
+        <div *ngFor="let t of hotelsTunis">
+          <ng-container *ngIf="t.promotion==true">
+            <div class="col-4">
+              <div class="card " style="width:400px">
+       
+                <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+           
+                 <div class="card-body">
+                 <h4 class="card-title">{{t.libelle|titlecase}}</h4>
+                   <p class="card-text">{{t.ville|ville}}</p>
+                     <a [routerLink]="['/HotelsHammamet',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                  </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="row"><h2>Hammamet</h2>
-        <ng-container *ngFor="let t of hotelsHammamet">
-           <div class="col-4">
-             <div class="card " style="width:400px">
-      
-               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
-          
-                <div class="card-body">
-                <h4 class="card-title">{{t.libelle}}</h4>
-                  <p class="card-text">{{t.ville}}</p>
-                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
-                 </div>
-             </div>
-           </div>
-        </ng-container>
+    <div class="row"><h2><i class="fas fa-map-marker-alt"></i> Hammamet</h2>
+      <div *ngFor="let t of hotelsHammamet">
+        <ng-container *ngIf="t.promotion==true">
+          <div class="col-4">
+            <div class="card " style="width:400px">
+     
+              <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+         
+               <div class="card-body">
+               <h4 class="card-title">{{t.libelle}}</h4>
+                 <p class="card-text">{{t.ville}}</p>
+                   <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                </div>
+            </div>
+          </div>
+       </ng-container>
+      </div>
     </div>
 </div>
 <div class="container">
-    <div class="row"><h2>Ain-Draham</h2>
-        <ng-container *ngFor="let t of hotelsHammamet">
-           <div class="col-4">
-             <div class="card " style="width:400px">
-      
-               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
-          
-                <div class="card-body">
-                <h4 class="card-title">{{t.libelle}}</h4>
-                  <p class="card-text">{{t.ville}}</p>
-                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
-                 </div>
-             </div>
-           </div>
-        </ng-container>
+    <div class="row"><h2><i class="fas fa-map-marker-alt"></i> Ain-Draham</h2>
+      <div *ngFor="let t of hotelsAinDraham">
+        <ng-container *ngIf="t.promotion==true">
+          <div class="col-4">
+            <div class="card " style="width:400px">
+     
+              <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+         
+               <div class="card-body">
+               <h4 class="card-title">{{t.libelle}}</h4>
+                 <p class="card-text">{{t.ville}}</p>
+                   <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                </div>
+            </div>
+          </div>
+       </ng-container>
+      </div>
     </div>
 </div>
 <div class="container">
-    <div class="row"><h2>Djerba</h2>
-        <ng-container *ngFor="let t of hotelsHammamet">
-           <div class="col-4">
-             <div class="card " style="width:400px">
-      
-               <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
-          
-                <div class="card-body">
-                <h4 class="card-title">{{t.libelle}}</h4>
-                  <p class="card-text">{{t.ville}}</p>
-                    <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
-                 </div>
-             </div>
-           </div>
-        </ng-container>
+    <div class="row"><h2><i class="fas fa-map-marker-alt"></i> Djerba</h2>
+      <div *ngFor="let t of Djerba">
+        <ng-container *ngIf="t.promotion==true">
+          <div class="col-4">
+            <div class="card " style="width:400px">
+     
+              <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+         
+               <div class="card-body">
+               <h4 class="card-title">{{t.libelle}}</h4>
+                 <p class="card-text">{{t.ville}}</p>
+                   <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+                </div>
+            </div>
+          </div>
+       </ng-container>
+      </div>
     </div>
-</div> -->
+</div>
+<div class="container">
+  <div class="row"><h2><i class="fas fa-map-marker-alt"></i> Tozeur</h2>
+    <div *ngFor="let t of Tozeur">
+      <ng-container *ngIf="t.promotion==true">
+        <div class="col-4">
+          <div class="card " style="width:400px">
+   
+            <img class="card-img-top" [src]="t.tableau_img[0]" alt="Card image">
+       
+             <div class="card-body">
+             <h4 class="card-title">{{t.libelle}}</h4>
+               <p class="card-text">{{t.ville}}</p>
+                 <a [routerLink]="['/HotelsTunis',t.libelle]" class="btn btn-warning" >VOIR L'HÔTEL</a>
+              </div>
+          </div>
+        </div>
+     </ng-container>
+    </div>
+  </div>
+</div>

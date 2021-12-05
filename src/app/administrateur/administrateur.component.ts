@@ -1,25 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HotelsService } from '../service/hotel.service';
 import { Sejour } from '../models/sejour';
+import { HotelsService } from '../service/hotel.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-administrateur',
+  templateUrl: './administrateur.component.html',
+  styleUrls: ['./administrateur.component.css']
 })
-export class HomeComponent implements OnInit {
-    Utilisateur!: FormGroup;
-    user:string[]=[];
+export class AdministrateurComponent implements OnInit {
+  Utilisateur!: FormGroup;
+  user:string[]=[];
     HotelsTunis:Sejour[] = [];
   
   constructor(public lm:FormBuilder,public User:HotelsService,private router:Router,private hotelsService:HotelsService) { }
 
 
-  onSubmit(){
+  verif(){
     if((this.Utilisateur.value['username']==this.user[0])&&(this.Utilisateur.value['password']==this.user[1]))
-    {this.router.navigateByUrl('/login');}
+    {this.router.navigate(['Best-Tunisia-Travel/backoffice']);
+      return true;}
+    else 
+    {
+      return false;}
   }
 
   ngOnInit(): void {this.HotelsTunis=this.hotelsService.Hotelstunis();
@@ -28,7 +32,6 @@ export class HomeComponent implements OnInit {
       password:['']
     });
     this.user=this.User.getuser();
-
   }
 
 }

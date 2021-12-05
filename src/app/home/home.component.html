@@ -1,3 +1,6 @@
+<br><br><br><br><br><br>
+<div class="c">
+  <app-menu></app-menu>
 <!-- Banner Image  -->
 <div class="banner-image w-380 vh-99 d-flex justify-content-center align-items-center">
     <div class="content text-center">
@@ -66,24 +69,26 @@
         </div>
     </div>
     </div>
-    
   </div>
- <div>
-   <div class="container mt-3">
-    <form [formGroup]="Utilisateur" (ngSubmit)="onSubmit()">
-      <div class="barre"><label>Back Office</label></div>
-      <div class="input-group mb-3"> 
-        <label class="input-group-text">Username
-          <input type="text" placeholder="Username" formControlName="username"></label>
-        
-      </div>
-      <div class="input-group mb-3"> 
-        <label class="input-group-text">Password
-          <input type="password" placeholder="Password" formControlName="password"></label>
-        
-      </div>
-      <button class="btn2" type="submit" class="btn-lg " [disabled]="Utilisateur.invalid">s'inscrire</button>
-    </form>
-   </div>
-
- </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <h4 style="color: brown; text-decoration:underline ;">Suivez-nous</h4>
+      <div>
+    <a href="https://www.facebook.com/"><img src="assets/facebook.png"></a>
+    <a href="https://twitter.com/"><img src="assets/twitter.png"></a>
+    <a href="https://www.instagram.com/"><img src="assets/instagram (1).png"></a>
+    <a href="https://www.linkedin.com/"><img src="assets/linkedin.png"></a>
+    <a href="https://www.youtube.com/"><img src="assets/youtube.png"></a>
+       </div>
+    </div>
+    <div class="col-4">
+      <h4 style="color: brown; text-decoration:underline ;">Paiement sécurisé</h4>
+      <div>
+    <img src="assets/cib-visa-mastercard.png">
+       </div>
+    </div>
+    </div>
+</div>
+<br><br>
